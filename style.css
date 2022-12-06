@@ -1,0 +1,105 @@
+/*---My Colors---*/
+:root {
+    --blue: #0081CF;
+    --black: #3E4756;
+    --white: #F0FAFF;
+    --grey: #A1ACBD;
+    --red:#DA4A49;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(to bottom, var(--white), var(--grey) );
+    height: 100%;
+}
+/*----  Navbar  ----*/
+
+.navbar {
+    position: fixed;
+    margin-top: -4rem;
+    background: linear-gradient(to bottom right, #3E4756 , var(--white));
+    display: grid;
+    width: 100%;
+    min-height: 50px;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+}
+.navbar .wrapper .searchBar {
+outline: none;
+width: 500px;
+height: 25px;
+border-radius: 15px;
+font-size: 20px;
+text-align: center;
+padding: 1rem;
+}
+
+.container {
+    margin-top: 4rem;
+}
+
+.row {
+    margin: 4em;
+}
+.card-body{
+    margin-top: 1em;
+    background: linear-gradient(to right bottom, var(--blue) 40% , var(--white));
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    text-shadow: 1px 1px 1px black;
+    box-shadow:1px 1px 3px 1px;
+}
+
+.card-body .card-title h3 {
+    color: #dd0202;
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.card-column {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    text-shadow: 1px 1px 1px black;
+}
+
+.card-column h5 {
+    display: grid;
+    font-size: 17px;
+    grid-gap: 5px;
+    color:var(--red); 
+    text-shadow: 1px 1px 1px black;
+}
+
+.card-column h5 span{
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.card-column h5 span a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px black;
+}
+
+.card {
+    animation: ani 0.5s normal linear;
+    margin-top: 4rem;
+}
+
+@keyframes ani{
+0%{transform: scale(0.0);}
+70%{transform: scale(1.1);}
+100%{transform: scale(1);}
+}
