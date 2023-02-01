@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,500&display=swap');
+
 /*---My Colors---*/
 :root {
     --blue: #0081CF;
@@ -8,94 +10,105 @@
 }
 
 * {
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body{
-    background: linear-gradient(to bottom, var(--white), var(--grey) );
+    background: #ccc;
     height: 100%;
 }
 /*----  Navbar  ----*/
 
 .navbar {
+    top: 0;
     position: fixed;
-    margin-top: -4rem;
-    background: linear-gradient(to bottom right, #3E4756 , var(--white));
+    background: #eee;
     display: grid;
     width: 100%;
     min-height: 50px;
     text-align: center;
     justify-items: center;
     align-items: center;
+    z-index: 9999;
 }
 .navbar .wrapper .searchBar {
 outline: none;
 width: 500px;
 height: 25px;
-border-radius: 15px;
+border-radius: 5px;
 font-size: 20px;
 text-align: center;
 padding: 1rem;
-}
-
-.container {
-    margin-top: 4rem;
+border: none;
 }
 
 .row {
-    margin: 4em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    margin: 20px;
+    margin-top: 70px;
 }
 .card-body{
-    margin-top: 1em;
-    background: linear-gradient(to right bottom, var(--blue) 40% , var(--white));
-    padding: 1em;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 15px;
-    text-shadow: 1px 1px 1px black;
-    box-shadow:1px 1px 3px 1px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+    max-width: 380px;
+    min-height: 510px;
 }
 
-.card-body .card-title h3 {
-    color: #dd0202;
-    font-size: 28px;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 1px black;
+.card {
+    transition: ease-in-out 300ms;
 }
 
+.card:hover{
+    transform: scale(1.02);
+    border-radius: 10px;
+}
 .card-column {
+    text-align: start;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    text-shadow: 1px 1px 1px black;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-body .card-title{
+    color: rgb(104, 104, 104);
+    font-size: 22px;
+    text-align: center;
+    background-color: #eee;
+    border-radius: 7px;
+    margin-top: -10px;
+    width: 100%;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card-body span {
+    margin-bottom: 5px;
 }
 
 .card-column h5 {
     display: grid;
     font-size: 17px;
-    grid-gap: 5px;
     color:var(--red); 
-    text-shadow: 1px 1px 1px black;
 }
 
 .card-column h5 span{
     font-size: 20px;
     color: white;
-    text-shadow: 1px 1px 1px black;
 }
 
-.card-column h5 span a{
+.card-column span a{
     cursor: pointer;
     text-decoration: none;
-    color: #ffffff;
-    text-shadow: 1px 1px 1px black;
+    color: black;
 }
 
 .card {
     animation: ani 0.5s normal linear;
-    margin-top: 4rem;
 }
 
 @keyframes ani{
